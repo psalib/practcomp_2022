@@ -1,0 +1,67 @@
+    1  pwd
+    2  ls /home
+    3  cd /home/salibp21/downloads
+    4  cd /home/salibp21/Downloads
+    5  pwd
+    6  cd Desktop/
+    7  ls
+    8  cd
+    9  mkdir praccomp
+   10  cd praccomp/
+   11  ls
+   12  touch test.txt
+   13  ls
+   14  ls -la
+   15  echo $PATH
+   16  ls
+   17  less test.txt
+   18  text.txt
+   19  nano test.txt
+   20  less test.txt
+   21  ls -lh
+   22  ls -l
+   23  rm test.txt
+   24  ls 
+   25  ls -lh
+   26  touch test.txt
+   27  mkdir blah 
+   28  ls
+   29  rm blah 
+   30  rmdir blah 
+   31  ls
+   32  rm
+   33  mkdir blah 
+   34  touch blah/test2.txt
+   35  rmdir
+   36  rm -r blah 
+   37  ls
+   38  less blah 
+   39  rmdir
+   40  cd 
+   41  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   42  lw
+   43  ls
+   44  bash min
+   45  basg  Miniconda3-latest-Linux-x86_64.sh
+   46  bash  Miniconda3-latest-Linux-x86_64.sh
+   47  rmdir
+   48  exit
+   49  cd praccomp/
+   50  ls 
+   51  cd practcomp_2022/
+   52  ls
+   53  nano README.md
+   54  ls 
+   55  gut status 
+   56  git status 
+   57  git add README.md
+   58  git status 
+   59  git commit -m "added README.md"
+   60  git config --global user.email pjsalib7@gmail.com
+   61  git config --global user.name "Paul Salib" 
+   62  git commit -m "added README.md"
+   63  git status 
+   64  git push -m "pushed README.md"
+   65  git push 
+   66  history
+   67  history > log20220901.txt
