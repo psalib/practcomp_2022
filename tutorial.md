@@ -74,15 +74,14 @@ Generic example
 ```
  echo "hello"
 ```
-```
-	Python example
+Python example
+```python
 print ("hello")
 ```
 
 R example
 
-```
-r
+```r
 x<- 4^2
 ```
 
