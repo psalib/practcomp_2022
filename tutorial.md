@@ -102,3 +102,9 @@ content column 1 | content column 2
 
 
 
+## EMOJIS 
+
+:spider: 
+:egypt flag:
+:$: 
+:dollar sign: 
