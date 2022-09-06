@@ -41,12 +41,47 @@ ordered
 	* item 3a
 	* item 3b
 
-#bullet points 
+
+## bullet points 
 
 - point 1 
 - point 2 
 - point 3 
 	- point 3a
 
-b 
 
+
+## IMAGES 
+
+! [alt text - hammer and sickle](link)
+
+
+## LINKS 
+
+https://github.com - automatic
+
+[github](https.//github.com)
+
+## BACKSLASH ESCAPE 
+
+\ *literal asterisks\*
+
+
+## FENCED CODE BLOCKS
+
+Generic example 
+
+```
+ echo "hello"
+```
+```
+	Python example
+print ("hello")
+```
+
+R example
+
+```
+r
+x<- 4^2
+```
