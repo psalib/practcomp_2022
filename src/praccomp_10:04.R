@@ -1,8 +1,11 @@
 ## project management
+```{r}
 
-1. set up management structure (i.e., "data", "src", "results", "doc")
-2. discuss avoiding redundancies of files 
-3. make sure to use version control (i.e., Git)
+```
+
+# 1. set up management structure (i.e., "data", "src", "results", "doc")
+# 2. discuss avoiding redundancies of files 
+# 3. make sure to use version control (i.e., Git)
 
 ## getting help 
 ```{r}
@@ -168,6 +171,153 @@ cats[3,]
 ```{r}
 cats[2:3,c(1,3)]
 ```
+
+
+### missed class 
+
+### matricies resumed 
+```{r}
+set.seed(65)
+m <- matrix(rnorm(6*4), ncol=4, nrow=6)
+m
+```
+
+```{r}
+m[3:4, c(3,1)]
+```
+
+### list revisited 
+```{r}
+xlist <- list(a="BIOL48006220", b=seq(1,10, by = .5), data = "grade")
+xlist
+```
+
+
+```{r}
+xlist[1:2]
+```
+
+
+```{r}
+xlist['a']
+```
+
+
+```{r}
+xlist['b']
+```
+
+
+```{r}
+xlist[['b']]
+```
+
+```{r}
+xlist$b
+```
+
+
+### data frames revisited 
+```{r}
+gp <- read.csv('/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/data /sdi.csv')
+```
+
+```{r}
+head(gp[3], n=10L)
+```
+```{r}
+nrow(gp)
+```
+```{r}
+head(gp[["country"]],10L)
+```
+
+```{r}
+gp$X2016
+```
+
+
+```{r}
+gp[c(1,3), 2:5]
+```
+
+```{r}
+gp[ which(gp$X1989 <= 100 & gp$X2018 <= 100),]
+```
+
+
+### conditionals 
+```{r}
+n <- 10
+
+if (n<10) {
+  print("n is less than 10")
+  } else if (n>10) {
+    print("n is greater than 10")
+  } else { 
+    print("n is equal to 10")}
+  
+```
+
+```{r}
+for (n in seq(1,20)){
+  
+
+  if (n<10) {
+    print("n is less than 10")
+    } else if (n>10) {
+     print("n is greater than 10")
+    } else { 
+      print("n is equal to 10")}}
+```
+```{r}
+g <- 0
+
+while(g<=10) { 
+  print(paste(g, "is less than or equal to 10"))
+  g <- g+1
+  }
+```
+
+
+## plotting and figures 
+```{r}
+# install.packages("ggplot2")
+```
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+sus.data <- read.csv('/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/data /sdi.csv')
+
+head(sus.data)
+```
+
+```{r}
+ggplot(data=sus.data, mapping=aes(x=X1989, y=X2018)) + geom_point()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
