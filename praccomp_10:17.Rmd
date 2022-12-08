@@ -1,0 +1,549 @@
+### matricies resumed 
+```{r}
+set.seed(65)
+m <- matrix(rnorm(6*4), ncol=4, nrow=6)
+m
+```
+
+```{r}
+m[3:4, c(3,1)]
+```
+
+### list revisited 
+```{r}
+xlist <- list(a="BIOL48006220", b=seq(1,10, by = .5), data = "grade")
+xlist
+```
+
+
+```{r}
+xlist[1:2]
+```
+
+
+```{r}
+xlist['a']
+```
+
+
+```{r}
+xlist['b']
+```
+
+
+```{r}
+xlist[['b']]
+```
+
+```{r}
+xlist$b
+```
+
+
+### data frames revisited 
+```{r}
+gp <- read.csv('/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/data /sdi.csv')
+```
+
+```{r}
+head(gp[3], n=10L)
+```
+```{r}
+nrow(gp)
+```
+```{r}
+head(gp[["country"]],10L)
+```
+
+```{r}
+gp$X2016
+```
+
+
+```{r}
+gp[c(1,3), 2:5]
+```
+
+```{r}
+gp[ which(gp$X1989 <= 100 & gp$X2018 <= 100),]
+```
+
+
+### conditionals 
+```{r}
+n <- 10
+
+if (n<10) {
+  print("n is less than 10")
+  } else if (n>10) {
+    print("n is greater than 10")
+  } else { 
+    print("n is equal to 10")}
+  
+```
+
+```{r}
+for (n in seq(1,20)){
+  
+
+  if (n<10) {
+    print("n is less than 10")
+    } else if (n>10) {
+     print("n is greater than 10")
+    } else { 
+      print("n is equal to 10")}}
+```
+```{r}
+g <- 0
+
+while(g<=10) { 
+  print(paste(g, "is less than or equal to 10"))
+  g <- g+1
+  }
+```
+
+
+## plotting and figures 
+```{r}
+# install.packages("ggplot2")
+```
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+gp <- read.csv('/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/data/gapminder_all.csv')
+
+head(gp)
+```
+
+```{r}
+gapminder <- read.csv("https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_data.csv")
+
+head(gapminder)
+
+ggplot(data=gapminder, mapping=aes(x=gdpPercap, y=lifeExp)) + geom_point()
+
+ggplot(data=gapminder, mapping=aes(x=year, lifeExp, by=country, color=continent)) + geom_line()
+
+```
+
+```{r}
+ggplot(data=gapminder, mapping=aes(x=year, lifeExp, by=country, color=continent)) + geom_line()
+```
+
+```{r}
+ggplot(data=gapminder, mapping=aes(x=year, y=lifeExp, by=country)) + geom_line(mapping=aes(color=continent)) + geom_point()
+```
+
+```{r}
+ggplot(data=gapminder, mapping=aes(x=gdpPercap, y=lifeExp)) + geom_point(alpha=0.25) + scale_x_log10()
+```
+
+```{r}
+ggplot(data=gapminder, mapping=aes(x=gdpPercap, y=lifeExp)) + geom_point(alpha=0.3, color="purple", size=1.3) + scale_x_log10() + geom_smooth(method=lm, color="gold")
+
+```
+
+
+```{r}
+africas <- gapminder[gapminder$continent == "Africa", ]
+head(africas)
+```
+
+
+```{r}
+ggplot(data = africas, mapping = aes(x=year, y=lifeExp)) + 
+  geom_line() +
+  facet_wrap( ~ country) + 
+  theme(axis.text.x = element_text(angle = 45)) + 
+  labs(
+    x = "Year",
+    y = "Life Expectency", 
+    title = "Life Expectency Over Time in African Countries"
+  )
+```
+
+
+```{r}
+AfricanLifeExpectency <- ggplot(data = africas, mapping = aes(x=year, y=lifeExp)) + 
+  geom_line() +
+  facet_wrap( ~ country) + 
+  theme(axis.text.x = element_text(angle = 45)) + 
+  labs(
+    x = "Year",
+    y = "Life Expectency", 
+    title = "Life Expectency Over Time in African Countries"
+  )
+```
+
+
+```{r}
+AfricanLifeExpectency
+ggsave(filename = "/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/results/AfricanLifeExp.png", plot = AfricanLifeExpectency, width = 24, height = 40, dpi = 300, units = "cm")
+```
+
+```{r}
+pdf(file = "/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/results/AfricanLifeExp.pdf", width = 24, height = 40)
+plot(AfricanLifeExpectency)
+dev.off()
+
+```
+
+
+```{r}
+write.table(gapminder, file = "/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/data/gapminder_web", sep = ",")
+```
+
+```{r}
+write.csv(africas, file = "/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/data/gapminder_web_africas")
+```
+
+
+```{r}
+### install.packages(c("ggridges", "viridis", "hrbrthemes"), dependencies = T)
+```
+
+```{r}
+library(ggridges)
+library(viridis)
+library(hrbrthemes)
+library(ggplot2)
+```
+
+```{r}
+## install.packages(c("ggstatsplot", "palmerpenguins", "tidyverse"), dependencies = T)
+```
+
+```{r}
+library(ggstatsplot)
+library(palmerpenguins)
+library(tidyverse)
+```
+
+```{r}
+penguins
+```
+
+
+```{r}
+gapminder2 <- drop_na(gapminder)
+```
+
+
+
+### 10/27 class - statistics in R
+
+```{r}
+median(gapminder$lifeExp)
+```
+
+```{r}
+## variation 
+    # range 
+range()
+
+    # difference 
+diff()
+
+    # variance 
+var()
+
+    # std dev 
+sd()
+
+    #IQR
+IDR()
+
+    # z - score 
+scale() 
+
+    # summary 
+summary() 
+
+```
+
+
+
+# basic R plots 
+
+```{r}
+# histogram 
+hist() 
+
+#plots 
+plot()
+
+# box plots 
+boxplot()
+```
+
+# bi/multivariate stats 
+
+```{r}
+# plotting and regression 
+ 
+spid.gen <- read.csv("/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/data/spider_genitalia.csv", header = T)
+```
+
+
+```{r}
+# box plots 
+boxplot(spid.gen$left.bulb ~ spid.gen$habitat)
+```
+
+
+
+
+```{r}
+# scatter plots 
+plot(spid.gen$left.bulb ~ spid.gen$right.bulb)
+plot(spid.gen$left.bulb ~ spid.gen$right.bulb, pch = as.character(spid.gen$habitat))
+```
+
+```{r}
+# linear regression 
+gen.reg <- lm(spid.gen$left.bulb ~ spid.gen$right.bulb)
+print(gen.reg)
+summary(gen.reg)
+plot(spid.gen$left.bulb ~ spid.gen$right.bulb)
+abline(gen.reg)
+```
+
+```{r}
+# correlation coefficients & spearman rank correlation 
+cor.gen <- with(spid.gen, cor(left.bulb, right.bulb))
+print(cor.gen^2)
+```
+
+```{r}
+spear.cor.gen <- with(spid.gen, cor(left.bulb, right.bulb, method="spearman"))
+print(spear.cor.gen)
+```
+
+```{r}
+# residuals 
+resid(gen.reg)
+```
+```{r}
+# transformations 
+plot(spid.gen$left.bulb^2~spid.gen$right.bulb^2)
+```
+
+2. comparing discrete treatment effects 
+
+```{r}
+# chi square 
+exp <- c(.16,.17,.16,.17,.17,.17)
+obs_weighted <- c(4,15,6,15,18,2)
+obs_fair <- c(10,10,10,10,10,10)
+chisq.test(obs, p=exp)
+chisq.test(obs_fair, p=exp)
+```
+
+
+```{r}
+# t tests 
+#H0 - true mean is equal to 0, but you can set true mean equal to other values with mu=
+t.test(spid.gen$carapace.length)
+mean(spid.gen$carapace.length)
+t.test(spid.gen$carapace.length, mu=29)
+```
+```{r}
+# two sample t test 
+habitat.t2 <- t.test(spid.gen$carapace.length ~ spid.gen$habitat)
+habitat.t2
+```
+
+```{r}
+habitat.tless <- t.test(spid.gen$left.bulb, alternative = "less")
+habitat.tless
+habitat.tgreater <- t.test(spid.gen$left.bulb, alternative = "greater")
+habitat.tgreater
+
+```
+
+
+
+# plotting 
+
+```{r}
+plot(1:25, rep(.25,25), pch=1:25, col=1:25, ylim=c(0,6), cex=2, ylab="line types (lty) 1 to 6", xlab="plotting character = (pch) 1 to 25 and colours (col) 1 to 8", main= "line types (lty), plotting characters (pch), /nand colors (col) for plot and xyplot", lab=c(25,7,2))
+
+points(1:8, rep(0.5,8), pch=20, col=1:8, cex=3)
+
+abline(h=1:6, lty=1:6, col=1:6, lwd=3)
+```
+
+```{r}
+pdf("/Users/bolajohn/Desktop/ECU/biol48006220_fall2022/practcomp_2022/results/plotCheatSheet.pdf")
+
+plot(1:25, rep(.25,25), pch=1:25, col=1:25, ylim=c(0,6), cex=2, ylab="line types (lty) 1 to 6", xlab="plotting character = (pch) 1 to 25 and colours (col) 1 to 8", main= "line types (lty), plotting characters (pch), /nand colors (col) for plot and xyplot", lab=c(25,7,2))
+
+points(1:8, rep(0.5,8), pch=20, col=1:8, cex=3)
+
+abline(h=1:6, lty=1:6, col=1:6, lwd=3)
+
+dev.off()
+```
+
+## looping and conditionals 
+a. if then statements 
+```{r}
+x <- 0
+if(x>0) {
+  print("positive number")
+} else if (x<0) {
+  print("negative number")
+} else 
+  print("zero")
+```
+
+```{r}
+a <- c(5,7,2,9)
+ifelse(a %% 2 == 0, "even", "odd")
+```
+
+b. for loops 
+```{r}
+z <- c(2,5,3,9,8,11,6)
+count <- 0 
+for (val in z) { 
+  if(val %% 2 == 0) count = count+1
+}
+
+print(count)
+
+
+```
+
+c. While statement 
+```{r}
+i <- 1 
+while (i<5) {
+  print(i)
+  i = i+1
+}
+```
+
+
+d. interruptions
+```{r}
+x <- 1:5 
+
+for (val in x) {
+  if (val == 3) { 
+    break
+  }
+  print(val)
+}
+
+```
+
+```{r}
+x <- 1:5
+for (val in x) {
+  if (val == 3) {
+    next
+  }
+  print(val)
+}
+```
+
+e. repeat 
+```{r}
+x <- 1 
+repeat { 
+  print(x)
+  x = x+1
+  if (x == 20) {
+    break
+  }
+   
+  }
+```
+
+
+## randomization and dataset management (short)
+a. data management 
+```{r}
+B <- matrix( 
+  c(2,4,3,1,5,87),
+  nrow=3,
+  ncol=2) 
+
+B
+
+```
+
+
+```{r}
+# transpose matrices 
+t(B)
+```
+
+```{r}
+C <- matrix( 
+  c(7,4,2),
+  nrow=3,
+  ncol=1
+  )
+
+C
+```
+
+
+```{r}
+## combining data 
+BC <- cbind(B, C)
+```
+
+```{r}
+## deconstruct to vextor of values 
+
+c(B)
+```
+
+
+b. randomizations
+```{r}
+# r norm(n, mean, sd)
+# sample(x, size, replace = F/T, prob = null)
+
+ndist <- rnorm(70, 10, 10)
+ndist
+```
+
+
+```{r}
+mean(ndist)
+sd(ndist)
+```
+
+```{r}
+hist(ndist)
+```
+
+```{r}
+sample(ndist,10, replace = F)
+```
+
+
+```{r}
+## random number generator for subsampling 
+test <- 1:70
+sample(test, 100, replace = T)
+```
+
+```{r}
+sample(test, 70, replace = T)
+```
+
+```{r}
+test1 <- c(391,392,393,394,395,396,19)
+sample(test1, 5, replace = T)
+```
+
+
+
