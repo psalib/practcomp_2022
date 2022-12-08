@@ -1,0 +1,1889 @@
+Last login: Tue Aug 30 17:04:53 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ ssh salibp21@150.216.55.139 -p 1201
+The authenticity of host '[150.216.55.139]:1201 ([150.216.55.139]:1201)' can't be established.
+ECDSA key fingerprint is SHA256:sYADBZQ7h097+OCqgQXr1Bi9Hzle/DOBX2HW/wPNqnU.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes 
+Warning: Permanently added '[150.216.55.139]:1201' (ECDSA) to the list of known hosts.
+salibp21@150.216.55.139's password: 
+Permission denied, please try again.
+salibp21@150.216.55.139's password: 
+Permission denied, please try again.
+salibp21@150.216.55.139's password: 
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.4.0-122-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 updates can be applied immediately.
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+salibp21@ecubio:~$ pwd
+/home/salibp21
+salibp21@ecubio:~$ ls /home
+asabors17  barnesma17  dudleym20  ecubio     gaddyg19  goodwillielab  hicksdi17  joynerco22  kylanders22  lost+found  mckinnonlab  ngsclass    praccomp  shostakm21  summerslab   trana20     zimmermanj18
+balalab    brewerlab   dyea21     finlayc21  gausec21  gurganuse19    john       keenelab    linuxbrew    lylyka18    meadowsm19   peraltalab  salibp21  smithdej16  thompsonlab  undergrads
+salibp21@ecubio:~$ cd /home/salibp21/downloads
+-bash: cd: /home/salibp21/downloads: No such file or directory
+salibp21@ecubio:~$ cd /home/salibp21/Downloads
+-bash: cd: /home/salibp21/Downloads: No such file or directory
+salibp21@ecubio:~$ pwd
+/home/salibp21
+salibp21@ecubio:~$ cd Desktop/
+-bash: cd: Desktop/: No such file or directory
+salibp21@ecubio:~$ ls
+examples.desktop
+salibp21@ecubio:~$ cd
+salibp21@ecubio:~$ mkdir praccomp
+salibp21@ecubio:~$ cd praccomp/
+salibp21@ecubio:~/praccomp$ ls
+salibp21@ecubio:~/praccomp$ touch test.txt
+salibp21@ecubio:~/praccomp$ ls
+test.txt
+salibp21@ecubio:~/praccomp$ ls -la
+total 8
+drwxrwxr-x 2 salibp21 salibp21 4096 Aug 30 17:37 .
+drwxr-xr-x 6 salibp21 salibp21 4096 Aug 30 17:36 ..
+-rw-rw-r-- 1 salibp21 salibp21    0 Aug 30 17:37 test.txt
+salibp21@ecubio:~/praccomp$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ecubio/FUSTr/bin:/home/ecubio/miniconda3/bin:/home/linuxbrew/.linuxbrew/bin:$PATH:/snap/bin:/usr/local/go/bin:/home/salibp21/go/bin
+salibp21@ecubio:~/praccomp$ ls
+test.txt
+salibp21@ecubio:~/praccomp$ less test.txt
+salibp21@ecubio:~/praccomp$ text.txt
+text.txt: command not found
+salibp21@ecubio:~/praccomp$ nano test.txt
+salibp21@ecubio:~/praccomp$ less test.txt
+salibp21@ecubio:~/praccomp$ ls -lh
+total 4.0K
+-rw-rw-r-- 1 salibp21 salibp21 20 Aug 30 17:49 test.txt
+salibp21@ecubio:~/praccomp$ ls -l
+total 4
+-rw-rw-r-- 1 salibp21 salibp21 20 Aug 30 17:49 test.txt
+salibp21@ecubio:~/praccomp$ rm test.txt
+salibp21@ecubio:~/praccomp$ ls 
+salibp21@ecubio:~/praccomp$ ls -lh
+total 0
+salibp21@ecubio:~/praccomp$ touch test.txt
+salibp21@ecubio:~/praccomp$ mkdir blah 
+salibp21@ecubio:~/praccomp$ ls
+blah  test.txt
+salibp21@ecubio:~/praccomp$ rm blah 
+rm: cannot remove 'blah': Is a directory
+salibp21@ecubio:~/praccomp$ rmdir blah 
+salibp21@ecubio:~/praccomp$ ls
+test.txt
+salibp21@ecubio:~/praccomp$ rm
+rm: missing operand
+Try 'rm --help' for more information.
+salibp21@ecubio:~/praccomp$ mkdir blah 
+salibp21@ecubio:~/praccomp$ touch blah/test2.txt
+salibp21@ecubio:~/praccomp$ rmdir
+rmdir: missing operand
+Try 'rmdir --help' for more information.
+salibp21@ecubio:~/praccomp$ rm -r blah 
+salibp21@ecubio:~/praccomp$ ls
+test.txt
+salibp21@ecubio:~/praccomp$ less blah 
+blah: No such file or directory
+salibp21@ecubio:~/praccomp$ rmdir
+rmdir: missing operand
+Try 'rmdir --help' for more information.
+salibp21@ecubio:~/praccomp$ cd 
+salibp21@ecubio:~$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+--2022-08-30 18:04:31--  https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+Resolving repo.anaconda.com (repo.anaconda.com)... 2606:4700::6810:8303, 2606:4700::6810:8203, 104.16.131.3, ...
+Connecting to repo.anaconda.com (repo.anaconda.com)|2606:4700::6810:8303|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 76607678 (73M) [application/x-sh]
+Saving to: ‘Miniconda3-latest-Linux-x86_64.sh’
+
+Miniconda3-latest-Linux-x86_64.sh                           100%[=========================================================================================================================================>]  73.06M  64.9MB/s    in 1.1s    
+
+2022-08-30 18:04:32 (64.9 MB/s) - ‘Miniconda3-latest-Linux-x86_64.sh’ saved [76607678/76607678]
+
+salibp21@ecubio:~$ lw
+lw: command not found
+salibp21@ecubio:~$ ls
+examples.desktop  Miniconda3-latest-Linux-x86_64.sh  praccomp
+salibp21@ecubio:~$ bash min
+bash: min: No such file or directory
+salibp21@ecubio:~$ basg  Miniconda3-latest-Linux-x86_64.sh
+
+Command 'basg' not found, did you mean:
+
+  command 'bamg' from deb rheolef (7.1-1)
+  command 'bash' from deb bash (5.0-6ubuntu1.2)
+
+Try: apt install <deb name>
+
+salibp21@ecubio:~$ bash  Miniconda3-latest-Linux-x86_64.sh
+
+Welcome to Miniconda3 py39_4.12.0
+
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+>>> 
+======================================
+End User License Agreement - Miniconda
+======================================
+
+Copyright 2015-2022, Anaconda, Inc.
+
+All rights reserved under the 3-clause BSD License:
+
+This End User License Agreement (the "Agreement") is a legal agreement between you and Anaconda, Inc. ("Anaconda") and governs your use of Miniconda.
+
+Subject to the terms of this Agreement, Anaconda hereby grants you a non-exclusive, non-transferable license to:
+
+  * Install and use the Miniconda,
+  * Modify and create derivative works of sample source code delivered in Miniconda subject to the Terms of Service for the Repository (as defined hereinafter) available at https://www.anaconda.com/terms-of-service, and
+  * Redistribute code files in source (if provided to you by Anaconda as source) and binary forms, with or without modification subject to the requirements set forth below.
+
+Anaconda may, at its option, make available patches, workarounds or other updates to Miniconda. Unless the updates are provided with their separate governing terms, they are deemed part of Miniconda licensed to you as provided in this Agr
+eement. This Agreement does not entitle you to any support for Miniconda.
+
+Anaconda reserves all rights not expressly granted to you in this Agreement.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  * Neither the name of Anaconda nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+You acknowledge that, as between you and Anaconda, Anaconda owns all right, title, and interest, including all intellectual property rights, in and to Miniconda and, with respect to third-party products distributed with or through Minicon
+da, the applicable third-party licensors own all right, title and interest, including all intellectual property rights, in and to such products. If you send or transmit any communications or materials to Anaconda suggesting or recommendin
+g changes to the software or documentation, including without limitation, new features or functionality relating thereto, or any comments, questions, suggestions or the like ("Feedback"), Anaconda is free to use such Feedback. You hereby 
+assign to Anaconda all right, title, and interest in, and Anaconda is free to use, without any attribution or compensation to any party, any ideas, know-how, concepts, techniques or other intellectual property rights contained in the Feed
+back, for any purpose whatsoever, although Anaconda is not required to use any Feedback.
+
+DISCLAIMER
+==========
+
+THIS SOFTWARE IS PROVIDED BY ANACONDA AND ITS CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO 
+EVENT SHALL ANACONDA BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTE
+RRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAM
+AGE.
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, ANACONDA AND ITS AFFILIATES SHALL NOT BE LIABLE FOR ANY SPECIAL, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES, OR ANY LOST PROFITS, LOSS OF USE, LOSS OF DATA OR LOSS OF GOODWILL, OR THE COSTS OF PR
+OCURING SUBSTITUTE PRODUCTS, ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT OR THE USE OR PERFORMANCE OF MINICONDA, WHETHER SUCH LIABILITY ARISES FROM ANY CLAIM BASED UPON BREACH OF CONTRACT, BREACH OF WARRANTY, TORT (INCLUDING NEGLI
+GENCE), PRODUCT LIABILITY OR ANY OTHER CAUSE OF ACTION OR THEORY OF LIABILITY. IN NO EVENT WILL THE TOTAL CUMULATIVE LIABILITY OF ANACONDA AND ITS AFFILIATES UNDER OR ARISING OUT OF THIS AGREEMENT EXCEED US0.00.
+
+Miscellaneous
+=============
+
+If you want to terminate this Agreement, you may do so by discontinuing use of Miniconda. Anaconda may, at any time, terminate this Agreement and the license granted hereunder if you fail to comply with any term of this Agreement. Upon an
+y termination of this Agreement, you agree to promptly discontinue use of the Miniconda and destroy all copies in your possession or control. Upon any termination of this Agreement all provisions survive except for the licenses granted to
+ you.
+
+This Agreement is governed by and construed in accordance with the internal laws of the State of Texas without giving effect to any choice or conflict of law provision or rule that would require or permit the application of the laws of an
+y jurisdiction other than those of the State of Texas. Any legal suit, action, or proceeding arising out of or related to this Agreement or the licenses granted hereunder by you must be instituted exclusively in the federal courts of the 
+United States or the courts of the State of Texas in each case located in Travis County, Texas, and you irrevocably submit to the jurisdiction of such courts in any such suit, action, or proceeding.
+
+Notice of Third Party Software Licenses
+=======================================
+
+Miniconda provides access to a repository (the "Repository") which contains software packages or tools licensed on an open source basis from third parties and binary packages of these third party tools. These third party software packages
+ or tools are provided on an "as is" basis and are subject to their respective license agreements as well as this Agreement and the Terms of Service for the Repository located at https://www.anaconda.com/terms-of-service; provided, howeve
+r, no restriction contained in the Terms of Service shall be construed so as to limit Your ability to download the packages contained in Miniconda provided you comply with the license for each such package. These licenses may be accessed 
+from within the Miniconda software[1] or https://www.anaconda.com/legal. Information regarding which license is applicable is available from within many of the third party software packages and tools and at https://repo.anaconda.com/pkgs/
+main/ and https://repo.anaconda.com/pkgs/r/. Anaconda reserves the right, in its sole discretion, to change which third party tools are included in the Repository accessible through Miniconda.
+
+
+Intel Math Kernel Library
+-------------------------
+
+Miniconda provides access to re-distributable, run-time, shared-library files from the Intel Math Kernel Library ("MKL binaries").
+
+Copyright 2018 Intel Corporation. License available at https://software.intel.com/en-us/license/intel-simplified-software-license (the "MKL License").
+
+You may use and redistribute the MKL binaries, without modification, provided the following conditions are met:
+
+  * Redistributions must reproduce the above copyright notice and the following terms of use in the MKL binaries and in the documentation and/or other materials provided with the distribution.
+  * Neither the name of Intel nor the names of its suppliers may be used to endorse or promote products derived from the MKL binaries without specific prior written permission.
+  * No reverse engineering, decompilation, or disassembly of the MKL binaries is permitted.
+
+You are specifically authorized to use and redistribute the MKL binaries with your installation of Miniconda subject to the terms set forth in the MKL License. You are also authorized to redistribute the MKL binaries with Miniconda or in 
+the Anaconda package that contains the MKL binaries. If needed, instructions for removing the MKL binaries after installation of Miniconda are available at https://docs.anaconda.com.
+
+cuDNN Software
+--------------
+
+Miniconda also provides access to cuDNN software binaries ("cuDNN binaries") from NVIDIA Corporation. You are specifically authorized to use the cuDNN binaries with your installation of Miniconda subject to your compliance with the licens
+e agreement located at https://docs.nvidia.com/deeplearning/sdk/cudnn-sla/index.html. You are also authorized to redistribute the cuDNN binaries with an Miniconda package that contains the cuDNN binaries. You can add or remove the cuDNN b
+inaries utilizing the install and uninstall features in Miniconda.
+
+cuDNN binaries contain source code provided by NVIDIA Corporation.
+
+Arm Performance Libraries
+-------------------------
+
+Arm Performance Libraries (Free Version): Anaconda provides access to software and related documentation from the Arm Performance Libraries ("Arm PL") provided by Arm Limited. By installing or otherwise accessing the Arm PL, you acknowled
+ge and agree that use and distribution of the Arm PL is subject to your compliance with the Arm PL end user license agreement located at: https://developer.arm.com/tools-and-software/server-and-hpc/downloads/arm-performance-libraries/eula
+.
+
+Export; Cryptography Notice
+===========================
+
+You must comply with all domestic and international export laws and regulations that apply to the software, which include restrictions on destinations, end users, and end use. Miniconda includes cryptographic software. The country in whic
+h you currently reside may have restrictions on the import, possession, use, and/or re-export to another country, of encryption software. BEFORE using any encryption software, please check your country's laws, regulations and policies con
+cerning the import, possession, or use, and re-export of encryption software, to see if this is permitted. See the Wassenaar Arrangement http://www.wassenaar.org/ for more information.
+
+Anaconda has self-classified this software as Export Commodity Control Number (ECCN) EAR99, which includes mass market information security software using or performing cryptographic functions with asymmetric algorithms. No license is req
+uired for export of this software to non-embargoed countries.
+
+The Intel Math Kernel Library contained in Miniconda is classified by Intel as ECCN 5D992.c with no license required for export to non-embargoed countries.
+
+The following packages listed on https://www.anaconda.com/cryptography are included in the Repository accessible through Miniconda that relate to cryptography.
+
+Last updated March 21, 2022
+
+Do you accept the license terms? [yes|no]
+[no] >>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> yes
+
+Miniconda3 will now be installed into this location:
+/home/salibp21/miniconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/home/salibp21/miniconda3] >>> 
+PREFIX=/home/salibp21/miniconda3
+Unpacking payload ...
+Collecting package metadata (current_repodata.json): done                                                                                                                                                                                     
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/salibp21/miniconda3
+
+  added / updated specs:
+    - _libgcc_mutex==0.1=main
+    - _openmp_mutex==4.5=1_gnu
+    - brotlipy==0.7.0=py39h27cfd23_1003
+    - ca-certificates==2022.3.29=h06a4308_1
+    - certifi==2021.10.8=py39h06a4308_2
+    - cffi==1.15.0=py39hd667e15_1
+    - charset-normalizer==2.0.4=pyhd3eb1b0_0
+    - colorama==0.4.4=pyhd3eb1b0_0
+    - conda-content-trust==0.1.1=pyhd3eb1b0_0
+    - conda-package-handling==1.8.1=py39h7f8727e_0
+    - conda==4.12.0=py39h06a4308_0
+    - cryptography==36.0.0=py39h9ce1e76_0
+    - idna==3.3=pyhd3eb1b0_0
+    - ld_impl_linux-64==2.35.1=h7274673_9
+    - libffi==3.3=he6710b0_2
+    - libgcc-ng==9.3.0=h5101ec6_17
+    - libgomp==9.3.0=h5101ec6_17
+    - libstdcxx-ng==9.3.0=hd4cf53a_17
+    - ncurses==6.3=h7f8727e_2
+    - openssl==1.1.1n=h7f8727e_0
+    - pip==21.2.4=py39h06a4308_0
+    - pycosat==0.6.3=py39h27cfd23_0
+    - pycparser==2.21=pyhd3eb1b0_0
+    - pyopenssl==22.0.0=pyhd3eb1b0_0
+    - pysocks==1.7.1=py39h06a4308_0
+    - python==3.9.12=h12debd9_0
+    - readline==8.1.2=h7f8727e_1
+    - requests==2.27.1=pyhd3eb1b0_0
+    - ruamel_yaml==0.15.100=py39h27cfd23_0
+    - setuptools==61.2.0=py39h06a4308_0
+    - six==1.16.0=pyhd3eb1b0_1
+    - sqlite==3.38.2=hc218d9a_0
+    - tk==8.6.11=h1ccaba5_0
+    - tqdm==4.63.0=pyhd3eb1b0_0
+    - tzdata==2022a=hda174b7_0
+    - urllib3==1.26.8=pyhd3eb1b0_0
+    - wheel==0.37.1=pyhd3eb1b0_0
+    - xz==5.2.5=h7b6447c_0
+    - yaml==0.2.5=h7b6447c_0
+    - zlib==1.2.12=h7f8727e_1
+
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-4.5-1_gnu
+  brotlipy           pkgs/main/linux-64::brotlipy-0.7.0-py39h27cfd23_1003
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2022.3.29-h06a4308_1
+  certifi            pkgs/main/linux-64::certifi-2021.10.8-py39h06a4308_2
+  cffi               pkgs/main/linux-64::cffi-1.15.0-py39hd667e15_1
+  charset-normalizer pkgs/main/noarch::charset-normalizer-2.0.4-pyhd3eb1b0_0
+  colorama           pkgs/main/noarch::colorama-0.4.4-pyhd3eb1b0_0
+  conda              pkgs/main/linux-64::conda-4.12.0-py39h06a4308_0
+  conda-content-tru~ pkgs/main/noarch::conda-content-trust-0.1.1-pyhd3eb1b0_0
+  conda-package-han~ pkgs/main/linux-64::conda-package-handling-1.8.1-py39h7f8727e_0
+  cryptography       pkgs/main/linux-64::cryptography-36.0.0-py39h9ce1e76_0
+  idna               pkgs/main/noarch::idna-3.3-pyhd3eb1b0_0
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.35.1-h7274673_9
+  libffi             pkgs/main/linux-64::libffi-3.3-he6710b0_2
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-9.3.0-h5101ec6_17
+  libgomp            pkgs/main/linux-64::libgomp-9.3.0-h5101ec6_17
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-9.3.0-hd4cf53a_17
+  ncurses            pkgs/main/linux-64::ncurses-6.3-h7f8727e_2
+  openssl            pkgs/main/linux-64::openssl-1.1.1n-h7f8727e_0
+  pip                pkgs/main/linux-64::pip-21.2.4-py39h06a4308_0
+  pycosat            pkgs/main/linux-64::pycosat-0.6.3-py39h27cfd23_0
+  pycparser          pkgs/main/noarch::pycparser-2.21-pyhd3eb1b0_0
+  pyopenssl          pkgs/main/noarch::pyopenssl-22.0.0-pyhd3eb1b0_0
+  pysocks            pkgs/main/linux-64::pysocks-1.7.1-py39h06a4308_0
+  python             pkgs/main/linux-64::python-3.9.12-h12debd9_0
+  readline           pkgs/main/linux-64::readline-8.1.2-h7f8727e_1
+  requests           pkgs/main/noarch::requests-2.27.1-pyhd3eb1b0_0
+  ruamel_yaml        pkgs/main/linux-64::ruamel_yaml-0.15.100-py39h27cfd23_0
+  setuptools         pkgs/main/linux-64::setuptools-61.2.0-py39h06a4308_0
+  six                pkgs/main/noarch::six-1.16.0-pyhd3eb1b0_1
+  sqlite             pkgs/main/linux-64::sqlite-3.38.2-hc218d9a_0
+  tk                 pkgs/main/linux-64::tk-8.6.11-h1ccaba5_0
+  tqdm               pkgs/main/noarch::tqdm-4.63.0-pyhd3eb1b0_0
+  tzdata             pkgs/main/noarch::tzdata-2022a-hda174b7_0
+  urllib3            pkgs/main/noarch::urllib3-1.26.8-pyhd3eb1b0_0
+  wheel              pkgs/main/noarch::wheel-0.37.1-pyhd3eb1b0_0
+  xz                 pkgs/main/linux-64::xz-5.2.5-h7b6447c_0
+  yaml               pkgs/main/linux-64::yaml-0.2.5-h7b6447c_0
+  zlib               pkgs/main/linux-64::zlib-1.2.12-h7f8727e_1
+
+
+Preparing transaction: done
+Executing transaction: done
+installation finished.
+Do you wish the installer to initialize Miniconda3
+by running conda init? [yes|no]
+[no] >>> yes
+no change     /home/salibp21/miniconda3/condabin/conda
+no change     /home/salibp21/miniconda3/bin/conda
+no change     /home/salibp21/miniconda3/bin/conda-env
+no change     /home/salibp21/miniconda3/bin/activate
+no change     /home/salibp21/miniconda3/bin/deactivate
+no change     /home/salibp21/miniconda3/etc/profile.d/conda.sh
+no change     /home/salibp21/miniconda3/etc/fish/conf.d/conda.fish
+no change     /home/salibp21/miniconda3/shell/condabin/Conda.psm1
+no change     /home/salibp21/miniconda3/shell/condabin/conda-hook.ps1
+no change     /home/salibp21/miniconda3/lib/python3.9/site-packages/xontrib/conda.xsh
+no change     /home/salibp21/miniconda3/etc/profile.d/conda.csh
+modified      /home/salibp21/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+If you'd prefer that conda's base environment not be activated on startup, 
+   set the auto_activate_base parameter to false: 
+
+conda config --set auto_activate_base false
+
+Thank you for installing Miniconda3!
+salibp21@ecubio:~$ rmdir
+rmdir: missing operand
+Try 'rmdir --help' for more information.
+salibp21@ecubio:~$ exit
+logout
+Connection to 150.216.55.139 closed.
+BolaJohns-MacBook-Pro:~ bolajohn$ ssh salibp21@150.216.55.139 -p 1201
+salibp21@150.216.55.139's password: 
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.4.0-122-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 updates can be applied immediately.
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+Last login: Tue Aug 30 17:26:59 2022 from 172.23.128.84
+(base) salibp21@ecubio:~$ client_loop: send disconnect: Broken pipe
+BolaJohns-MacBook-Pro:~ bolajohn$ ps | grep $$
+ 5500 ttys000    0:00.05 -bash
+ 9696 ttys000    0:00.01 grep 5500
+BolaJohns-MacBook-Pro:~ bolajohn$ /bin/bash
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ #!/bin/bash
+bash-3.2$ function File {
+>     # think you are inside the file
+>     # Change here
+>     echo "print the arguments"
+> }
+bash-3.2$ 
+bash-3.2$ # Do not change anything
+bash-3.2$ if [ ! $# -lt 1 ]; then
+>     File $*
+>     exit 0
+> fi
+bash-3.2$ 
+bash-3.2$ # change here
+bash-3.2$ # here you can pass the arguments
+bash-3.2$ bash test.sh arguments
+bash: test.sh: No such file or directory
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ ssh salibp21@150.216.55.139 -p 1201
+salibp21@150.216.55.139's password: 
+Permission denied, please try again.
+salibp21@150.216.55.139's password: 
+Permission denied, please try again.
+salibp21@150.216.55.139's password: 
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.4.0-122-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 updates can be applied immediately.
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+Last login: Tue Aug 30 18:10:41 2022 from 172.23.128.84
+(base) salibp21@ecubio:~$ wget https://github.com/psalib/practcomp_2022.git
+--2022-09-01 17:10:19--  https://github.com/psalib/practcomp_2022.git
+Resolving github.com (github.com)... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://github.com/psalib/practcomp_2022 [following]
+--2022-09-01 17:10:19--  https://github.com/psalib/practcomp_2022
+Reusing existing connection to github.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘practcomp_2022.git’
+
+practcomp_2022.git                                              [ <=>                                                                                                                                      ]  82.21K  --.-KB/s    in 0.06s   
+
+2022-09-01 17:10:19 (1.40 MB/s) - ‘practcomp_2022.git’ saved [84186]
+
+(base) salibp21@ecubio:~$ head miniconda3/
+bin/                         condabin/                    envs/                        include/                     LICENSE.txt                  share/                       ssl/                         x86_64-conda-linux-gnu/
+compiler_compat/             conda-meta/                  etc/                         lib/                         pkgs/                        shell/                       x86_64-conda_cos6-linux-gnu/ 
+(base) salibp21@ecubio:~$ head miniconda3/
+head: error reading 'miniconda3/': Is a directory
+(base) salibp21@ecubio:~$ head Miniconda3-latest-Linux-x86_64.sh
+#!/bin/sh
+#
+# NAME:  Miniconda3
+# VER:   py39_4.12.0
+# PLAT:  linux-64
+# LINES: 595
+# MD5:   0c82c9dd531785b1ca2af7f6b1c29523
+
+export OLD_LD_LIBRARY_PATH=$LD_LIBRARY_PATH
+unset LD_LIBRARY_PATH
+(base) salibp21@ecubio:~$ sudo nano ~/.inputrc
+[sudo] password for salibp21: 
+salibp21 is not in the sudoers file.  This incident will be reported.
+(base) salibp21@ecubio:~$ set completion-ignore-case on
+(base) salibp21@ecubio:~$ set show-all-if-ambiguous on
+(base) salibp21@ecubio:~$ TAB: menu-complete
+TAB:: command not found
+(base) salibp21@ecubio:~$ conda install mamba -c conda-forge
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 4.14.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/salibp21/miniconda3
+
+  added / updated specs:
+    - mamba
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    bzip2-1.0.8                |       h7f98852_4         484 KB  conda-forge
+    c-ares-1.18.1              |       h7f98852_0         113 KB  conda-forge
+    ca-certificates-2022.6.15  |       ha878542_0         149 KB  conda-forge
+    certifi-2022.6.15          |     pyhd8ed1ab_1         154 KB  conda-forge
+    icu-58.2                   |    hf484d3e_1000        22.6 MB  conda-forge
+    keyutils-1.6.1             |       h166bdaf_0         115 KB  conda-forge
+    krb5-1.19.3                |       h3790be6_0         1.4 MB  conda-forge
+    libarchive-3.5.2           |       hccf745f_1         1.6 MB  conda-forge
+    libcurl-7.84.0             |       h91b91d3_0         337 KB
+    libedit-3.1.20191231       |       he28a2e2_2         121 KB  conda-forge
+    libev-4.33                 |       h516909a_1         104 KB  conda-forge
+    libgcc-ng-11.2.0           |       h1234567_1         5.3 MB
+    libgomp-11.2.0             |       h1234567_1         474 KB
+    libiconv-1.16              |       h516909a_0         1.4 MB  conda-forge
+    libnghttp2-1.46.0          |       hce63b2e_0         680 KB
+    libsolv-0.7.20             |       h4ff587b_0         456 KB
+    libssh2-1.10.0             |       ha56f1ee_2         233 KB  conda-forge
+    libstdcxx-ng-12.1.0        |      ha89aaad_16         4.3 MB  conda-forge
+    libxml2-2.9.14             |       h74e7548_0         718 KB
+    lz4-c-1.9.3                |       h9c3ff4c_1         179 KB  conda-forge
+    lzo-2.10                   |    h516909a_1000         314 KB  conda-forge
+    mamba-0.15.3               |   py39h951de11_0         734 KB  conda-forge
+    openssl-1.1.1q             |       h7f8727e_0         2.5 MB
+    python_abi-3.9             |           2_cp39           4 KB  conda-forge
+    reproc-14.2.3              |       h7f98852_0          28 KB  conda-forge
+    reproc-cpp-14.2.3          |       h9c3ff4c_0          20 KB  conda-forge
+    zstd-1.5.2                 |       ha4553b6_0         488 KB
+    ------------------------------------------------------------
+                                           Total:        44.9 MB
+
+The following NEW packages will be INSTALLED:
+
+  bzip2              conda-forge/linux-64::bzip2-1.0.8-h7f98852_4
+  c-ares             conda-forge/linux-64::c-ares-1.18.1-h7f98852_0
+  icu                conda-forge/linux-64::icu-58.2-hf484d3e_1000
+  keyutils           conda-forge/linux-64::keyutils-1.6.1-h166bdaf_0
+  krb5               conda-forge/linux-64::krb5-1.19.3-h3790be6_0
+  libarchive         conda-forge/linux-64::libarchive-3.5.2-hccf745f_1
+  libcurl            pkgs/main/linux-64::libcurl-7.84.0-h91b91d3_0
+  libedit            conda-forge/linux-64::libedit-3.1.20191231-he28a2e2_2
+  libev              conda-forge/linux-64::libev-4.33-h516909a_1
+  libiconv           conda-forge/linux-64::libiconv-1.16-h516909a_0
+  libnghttp2         pkgs/main/linux-64::libnghttp2-1.46.0-hce63b2e_0
+  libsolv            pkgs/main/linux-64::libsolv-0.7.20-h4ff587b_0
+  libssh2            conda-forge/linux-64::libssh2-1.10.0-ha56f1ee_2
+  libxml2            pkgs/main/linux-64::libxml2-2.9.14-h74e7548_0
+  lz4-c              conda-forge/linux-64::lz4-c-1.9.3-h9c3ff4c_1
+  lzo                conda-forge/linux-64::lzo-2.10-h516909a_1000
+  mamba              conda-forge/linux-64::mamba-0.15.3-py39h951de11_0
+  python_abi         conda-forge/linux-64::python_abi-3.9-2_cp39
+  reproc             conda-forge/linux-64::reproc-14.2.3-h7f98852_0
+  reproc-cpp         conda-forge/linux-64::reproc-cpp-14.2.3-h9c3ff4c_0
+  zstd               pkgs/main/linux-64::zstd-1.5.2-ha4553b6_0
+
+The following packages will be UPDATED:
+
+  ca-certificates    pkgs/main::ca-certificates-2022.3.29-~ --> conda-forge::ca-certificates-2022.6.15-ha878542_0
+  certifi            pkgs/main/linux-64::certifi-2021.10.8~ --> conda-forge/noarch::certifi-2022.6.15-pyhd8ed1ab_1
+  libgcc-ng                               9.3.0-h5101ec6_17 --> 11.2.0-h1234567_1
+  libgomp                                 9.3.0-h5101ec6_17 --> 11.2.0-h1234567_1
+  libstdcxx-ng       pkgs/main::libstdcxx-ng-9.3.0-hd4cf53~ --> conda-forge::libstdcxx-ng-12.1.0-ha89aaad_16
+  openssl                                 1.1.1n-h7f8727e_0 --> 1.1.1q-h7f8727e_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+lz4-c-1.9.3          | 179 KB    | ################################################################################################################################################################################################### | 100% 
+mamba-0.15.3         | 734 KB    | ################################################################################################################################################################################################### | 100% 
+ca-certificates-2022 | 149 KB    | ################################################################################################################################################################################################### | 100% 
+libev-4.33           | 104 KB    | ################################################################################################################################################################################################### | 100% 
+certifi-2022.6.15    | 154 KB    | ################################################################################################################################################################################################### | 100% 
+openssl-1.1.1q       | 2.5 MB    | ################################################################################################################################################################################################### | 100% 
+libgomp-11.2.0       | 474 KB    | ################################################################################################################################################################################################### | 100% 
+icu-58.2             | 22.6 MB   | ################################################################################################################################################################################################### | 100% 
+libedit-3.1.20191231 | 121 KB    | ################################################################################################################################################################################################### | 100% 
+bzip2-1.0.8          | 484 KB    | ################################################################################################################################################################################################### | 100% 
+zstd-1.5.2           | 488 KB    | ################################################################################################################################################################################################### | 100% 
+c-ares-1.18.1        | 113 KB    | ################################################################################################################################################################################################### | 100% 
+reproc-14.2.3        | 28 KB     | ################################################################################################################################################################################################### | 100% 
+reproc-cpp-14.2.3    | 20 KB     | ################################################################################################################################################################################################### | 100% 
+libcurl-7.84.0       | 337 KB    | ################################################################################################################################################################################################### | 100% 
+libnghttp2-1.46.0    | 680 KB    | ################################################################################################################################################################################################### | 100% 
+libsolv-0.7.20       | 456 KB    | ################################################################################################################################################################################################### | 100% 
+python_abi-3.9       | 4 KB      | ################################################################################################################################################################################################### | 100% 
+lzo-2.10             | 314 KB    | ################################################################################################################################################################################################### | 100% 
+krb5-1.19.3          | 1.4 MB    | ################################################################################################################################################################################################### | 100% 
+libxml2-2.9.14       | 718 KB    | ################################################################################################################################################################################################### | 100% 
+libssh2-1.10.0       | 233 KB    | ################################################################################################################################################################################################### | 100% 
+libgcc-ng-11.2.0     | 5.3 MB    | ################################################################################################################################################################################################### | 100% 
+libstdcxx-ng-12.1.0  | 4.3 MB    | ################################################################################################################################################################################################### | 100% 
+keyutils-1.6.1       | 115 KB    | ################################################################################################################################################################################################### | 100% 
+libarchive-3.5.2     | 1.6 MB    | ################################################################################################################################################################################################### | 100% 
+libiconv-1.16        | 1.4 MB    | ################################################################################################################################################################################################### | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) salibp21@ecubio:~$ mamba 
+usage: mamba [-h] [-V] command ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+Options:
+
+positional arguments:
+  command
+    clean        Remove unused packages and caches.
+    compare      Compare packages between conda environments.
+    config       Modify configuration values in .condarc. This is modeled after the git config command. Writes to the user .condarc file (/home/salibp21/.condarc) by default.
+    create       Create a new conda environment from a list of specified packages.
+    help         Displays a list of available conda commands and their help strings.
+    info         Display information about current conda install.
+    init         Initialize conda for shell interaction. [Experimental]
+    install      Installs a list of packages into a specified conda environment.
+    list         List linked packages in a conda environment.
+    package      Low-level conda package utility. (EXPERIMENTAL)
+    remove       Remove a list of packages from a specified conda environment.
+    uninstall    Alias for conda remove.
+    run          Run an executable in a conda environment.
+    search       Search for packages and display associated information. The input is a MatchSpec, a query language for conda packages. See examples below.
+    update       Updates conda packages to the latest compatible version.
+    upgrade      Alias for conda update.
+    repoquery    Query repositories using mamba.
+
+optional arguments:
+  -h, --help     Show this help message and exit.
+  -V, --version  Show the conda version number and exit.
+
+conda commands available from other packages:
+  content-trust
+  env
+(base) salibp21@ecubio:~$ mamba install htop 
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (0.15.3) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['htop']
+
+pkgs/main/noarch         [====================] (00m:00s) Done
+pkgs/r/noarch            [====================] (00m:00s) Done
+pkgs/r/linux-64          [====================] (00m:00s) Done
+pkgs/main/linux-64       [====================] (00m:01s) Done
+
+Pinned packages:
+  - python 3.9.*
+
+
+Encountered problems while solving:
+  - nothing provides requested htop
+
+(base) salibp21@ecubio:~$ install htop -c conda-forge 
+install: cannot stat 'htop': No such file or directory
+(base) salibp21@ecubio:~$ mamba install htop -c conda-forge 
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (0.15.3) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['htop']
+
+pkgs/main/linux-64       [====================] (00m:00s) No change
+pkgs/main/noarch         [====================] (00m:00s) No change
+pkgs/r/linux-64          [====================] (00m:00s) No change
+pkgs/r/noarch            [====================] (00m:00s) No change
+conda-forge/noarch       [====================] (00m:04s) Done
+conda-forge/linux-64     [====================] (00m:06s) Done
+
+Pinned packages:
+  - python 3.9.*
+
+
+Transaction
+
+  Prefix: /home/salibp21/miniconda3
+
+  Updating specs:
+
+   - htop
+   - ca-certificates
+   - certifi
+   - openssl
+
+
+  Package            Version  Build           Channel                    Size
+───────────────────────────────────────────────────────────────────────────────
+  Install:
+───────────────────────────────────────────────────────────────────────────────
+
+  + htop               3.2.1  h0f457ee_0      conda-forge/linux-64     162 KB
+  + libnl              3.7.0  h166bdaf_0      conda-forge/linux-64     925 KB
+
+  Change:
+───────────────────────────────────────────────────────────────────────────────
+
+  - _libgcc_mutex        0.1  main            installed                      
+  + _libgcc_mutex        0.1  conda_forge     conda-forge/linux-64       3 KB
+  - _openmp_mutex        4.5  1_gnu           installed                      
+  + _openmp_mutex        4.5  2_gnu           conda-forge/linux-64      23 KB
+  - certifi        2022.6.15  pyhd8ed1ab_1    installed                      
+  + certifi        2022.6.15  py39hf3d152e_0  conda-forge/linux-64     155 KB
+  - openssl           1.1.1q  h7f8727e_0      installed                      
+  + openssl           1.1.1q  h166bdaf_0      conda-forge/linux-64       2 MB
+
+  Upgrade:
+───────────────────────────────────────────────────────────────────────────────
+
+  - libgcc-ng         11.2.0  h1234567_1      installed                      
+  + libgcc-ng         12.1.0  h8d9b700_16     conda-forge/linux-64     940 KB
+  - libgomp           11.2.0  h1234567_1      installed                      
+  + libgomp           12.1.0  h8d9b700_16     conda-forge/linux-64     459 KB
+
+  Summary:
+
+  Install: 2 packages
+  Change: 4 packages
+  Upgrade: 2 packages
+
+  Total download: 5 MB
+
+───────────────────────────────────────────────────────────────────────────────
+
+Confirm changes: [Y/n] y
+Finished _openmp_mutex                        (00m:00s)              23 KB     76 KB/s
+Finished certifi                              (00m:00s)             155 KB    470 KB/s
+Finished _libgcc_mutex                        (00m:00s)               3 KB      6 KB/s
+Finished libgomp                              (00m:00s)             459 KB      1 MB/s
+Finished htop                                 (00m:00s)             162 KB    396 KB/s
+Finished libnl                                (00m:00s)             925 KB      2 MB/s
+Finished libgcc-ng                            (00m:00s)             940 KB      2 MB/s
+Finished openssl                              (00m:00s)               2 MB      4 MB/s
+Downloading  [====================================================================================================] (00m:00s)    8.34 MB/s
+Extracting   [====================================================================================================] (00m:00s)        8 / 8
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) salibp21@ecubio:~$ cd praccomp/
+(base) salibp21@ecubio:~/praccomp$ gut 
+
+Command 'gut' not found, did you mean:
+
+  command 'gum' from snap gum (0.12.0)
+  command 'lut' from deb tracetuner (3.0.6~beta+dfsg-2build1)
+  command 'gt' from deb genometools (1.6.1+ds-2)
+  command 'git' from deb git (1:2.25.1-1ubuntu3.5)
+  command 'gout' from deb scotch (6.0.9-1)
+  command 'gpt' from deb gpt (1.1-5build1)
+  command 'gmt' from deb gmt (6.0.0+dfsg-1build2)
+  command 'cut' from deb coreutils (8.30-3ubuntu2)
+  command 'gst' from deb gnu-smalltalk (3.2.5-1.3build3)
+  command 'nut' from deb nutsqlite (2.0.6-1)
+
+See 'snap info <snapname>' for additional versions.
+
+(base) salibp21@ecubio:~/praccomp$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+(base) salibp21@ecubio:~/praccomp$ git clone https://github.com/psalib/practcomp_2022.git
+Cloning into 'practcomp_2022'...
+warning: You appear to have cloned an empty repository.
+(base) salibp21@ecubio:~/praccomp$ ls
+practcomp_2022  test.txt
+(base) salibp21@ecubio:~/praccomp$ client_loop: send disconnect: Broken pipe
+bash-3.2$ ssh salibp21@150.216.55.139 -p 1201
+salibp21@150.216.55.139's password: 
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.4.0-122-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 updates can be applied immediately.
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+Last login: Thu Sep  1 17:08:57 2022 from 172.23.128.226
+(base) salibp21@ecubio:~$ cd praccomp/
+(base) salibp21@ecubio:~/praccomp$ ls 
+practcomp_2022  test.txt
+(base) salibp21@ecubio:~/praccomp$ cd practcomp_2022/
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano README.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls 
+README.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ gut status 
+
+Command 'gut' not found, did you mean:
+
+  command 'gum' from snap gum (0.12.0)
+  command 'gout' from deb scotch (6.0.9-1)
+  command 'git' from deb git (1:2.25.1-1ubuntu3.5)
+  command 'gmt' from deb gmt (6.0.0+dfsg-1build2)
+  command 'gst' from deb gnu-smalltalk (3.2.5-1.3build3)
+  command 'cut' from deb coreutils (8.30-3ubuntu2)
+  command 'lut' from deb tracetuner (3.0.6~beta+dfsg-2build1)
+  command 'nut' from deb nutsqlite (2.0.6-1)
+  command 'gt' from deb genometools (1.6.1+ds-2)
+  command 'gpt' from deb gpt (1.1-5build1)
+
+See 'snap info <snapname>' for additional versions.
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git add README.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -m "added README.md"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'salibp21@ecubio.(none)')
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git config --global user.email pjsalib7@gmail.com
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git config --global user.name "Paul Salib" 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -m "added README.md"
+[master (root-commit) d7bb8e1] added README.md
+ 1 file changed, 8 insertions(+)
+ create mode 100644 README.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push -m "pushed README.md"
+error: unknown switch `m'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=(check|on-demand|no)]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': pjsalib7@gmail.com
+Password for 'https://pjsalib7@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/psalib/practcomp_2022.git/'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': pjsalib7@gmail.com
+Password for 'https://pjsalib7@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/psalib/practcomp_2022.git/'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib 
+Password for 'https://psalib@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/psalib/practcomp_2022.git/'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': pjsalib7@gmail.com
+Password for 'https://pjsalib7@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/psalib/practcomp_2022.git/'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib  
+Password for 'https://psalib@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 347 bytes | 347.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/psalib/practcomp_2022.git
+ * [new branch]      master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ history
+    1  pwd
+    2  ls /home
+    3  cd /home/salibp21/downloads
+    4  cd /home/salibp21/Downloads
+    5  pwd
+    6  cd Desktop/
+    7  ls
+    8  cd
+    9  mkdir praccomp
+   10  cd praccomp/
+   11  ls
+   12  touch test.txt
+   13  ls
+   14  ls -la
+   15  echo $PATH
+   16  ls
+   17  less test.txt
+   18  text.txt
+   19  nano test.txt
+   20  less test.txt
+   21  ls -lh
+   22  ls -l
+   23  rm test.txt
+   24  ls 
+   25  ls -lh
+   26  touch test.txt
+   27  mkdir blah 
+   28  ls
+   29  rm blah 
+   30  rmdir blah 
+   31  ls
+   32  rm
+   33  mkdir blah 
+   34  touch blah/test2.txt
+   35  rmdir
+   36  rm -r blah 
+   37  ls
+   38  less blah 
+   39  rmdir
+   40  cd 
+   41  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   42  lw
+   43  ls
+   44  bash min
+   45  basg  Miniconda3-latest-Linux-x86_64.sh
+   46  bash  Miniconda3-latest-Linux-x86_64.sh
+   47  rmdir
+   48  exit
+   49  cd praccomp/
+   50  ls 
+   51  cd practcomp_2022/
+   52  ls
+   53  nano README.md
+   54  ls 
+   55  gut status 
+   56  git status 
+   57  git add README.md
+   58  git status 
+   59  git commit -m "added README.md"
+   60  git config --global user.email pjsalib7@gmail.com
+   61  git config --global user.name "Paul Salib" 
+   62  git commit -m "added README.md"
+   63  git status 
+   64  git push -m "pushed README.md"
+   65  git push 
+   66  history
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ history > log20220901.txt
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git add log20220901.txt
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -m "added log.txt"
+[master b75ab8a] added log.txt
+ 1 file changed, 67 insertions(+)
+ create mode 100644 log20220901.txt
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ gitpush 
+gitpush: command not found
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib
+Password for 'https://psalib@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 817 bytes | 817.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/psalib/practcomp_2022.git
+   d7bb8e1..b75ab8a  master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ client_loop: send disconnect: Broken pipe
+bash-3.2$ 
+  [Restored Sep 6, 2022 at 4:57:06 PM]
+Last login: Tue Sep  6 16:57:01 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ ssh salibp21@150.216.55.139 -p 1201
+salibp21@150.216.55.139's password: 
+Permission denied, please try again.
+salibp21@150.216.55.139's password: 
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.4.0-122-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+3 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+Last login: Thu Sep  1 17:30:31 2022 from 172.23.128.226
+(base) salibp21@ecubio:~$ git
+git                 git-receive-pack    git-shell           git-upload-archive  git-upload-pack     
+(base) salibp21@ecubio:~$ git
+git                 git-receive-pack    git-shell           git-upload-archive  git-upload-pack     
+(base) salibp21@ecubio:~$ git
+git                 git-receive-pack    git-shell           git-upload-archive  git-upload-pack     
+(base) salibp21@ecubio:~$ git
+git                 git-receive-pack    git-shell           git-upload-archive  git-upload-pack     
+(base) salibp21@ecubio:~$ git
+git                 git-receive-pack    git-shell           git-upload-archive  git-upload-pack     
+(base) salibp21@ecubio:~$ git
+git                 git-receive-pack    git-shell           git-upload-archive  git-upload-pack     
+(base) salibp21@ecubio:~$ git
+git                 git-receive-pack    git-shell           git-upload-archive  git-upload-pack     
+(base) salibp21@ecubio:~$ gi
+gif2h5              ginstall-info       gio-querymodules    gist-paste          git-receive-pack    git-upload-archive  
+giftopnm            gio                 gipddecode          git                 git-shell           git-upload-pack     
+(base) salibp21@ecubio:~$ cho
+choom  chown  
+(base) salibp21@ecubio:~$ cho
+choom  chown  
+(base) salibp21@ecubio:~$ cho
+choom  chown  
+(base) salibp21@ecubio:~$ cd
+(base) salibp21@ecubio:~$ cd praccomp/practcomp_2022$
+-bash: cd: praccomp/practcomp_2022$: No such file or directory
+(base) salibp21@ecubio:~$ ls
+examples.desktop  miniconda3  Miniconda3-latest-Linux-x86_64.sh  praccomp  practcomp_2022.git
+(base) salibp21@ecubio:~$ cd praccomp
+(base) salibp21@ecubio:~/praccomp$ cd practcomp_2022.git
+-bash: cd: practcomp_2022.git: No such file or directory
+(base) salibp21@ecubio:~/praccomp$ git pull
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+(base) salibp21@ecubio:~/praccomp$ ls
+practcomp_2022  test.txt
+(base) salibp21@ecubio:~/praccomp$ cd practcomp_2022/
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls/l
+-bash: ls/l: No such file or directory
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls -l
+total 8
+-rw-rw-r-- 1 salibp21 salibp21 1387 Sep  1 17:49 log20220901.txt
+-rw-rw-r-- 1 salibp21 salibp21  169 Sep  1 17:35 README.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls
+log20220901.txt  README.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls 
+log20220901.txt  README.md  tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	tutorial.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git add tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   tutorial.md
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit
+Aborting commit due to empty commit message.
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -m "markdown tutorial added" 
+[master 17b4d88] markdown tutorial added
+ 1 file changed, 7 insertions(+)
+ create mode 100644 tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib            
+Password for 'https://psalib@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/psalib/practcomp_2022.git/'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib
+Password for 'https://psalib@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 393 bytes | 393.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/psalib/practcomp_2022.git
+   b75ab8a..17b4d88  master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   tutorial.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   tutorial.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib
+Password for 'https://psalib@github.com': 
+Everything up-to-date
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   tutorial.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push
+Username for 'https://github.com': psalib
+Password for 'https://psalib@github.com': 
+Everything up-to-date
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git add tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   tutorial.md
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit 
+Aborting commit due to empty commit message.
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -m "emphasis"
+[master fdb1e5d] emphasis
+ 1 file changed, 13 insertions(+)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib
+Password for 'https://psalib@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 400 bytes | 400.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/psalib/practcomp_2022.git
+   17b4d88..fdb1e5d  master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git add 
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git add tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -m "poem"
+[master f76c71f] poem
+ 1 file changed, 7 insertions(+)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib
+Password for 'https://psalib@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/psalib/practcomp_2022.git
+   fdb1e5d..f76c71f  master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m 
+error: switch `m' requires a value
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m "lists and bullets"
+[master c36e17f] lists and bullets
+ 1 file changed, 25 insertions(+)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib
+Password for 'https://psalib@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 387 bytes | 387.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/psalib/practcomp_2022.git
+   f76c71f..c36e17f  master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m "images, links, and code block" 
+[master f7f17c1] images, links, and code block
+ 1 file changed, 37 insertions(+), 2 deletions(-)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib 
+Password for 'https://psalib @github.com': 
+fatal: unable to access 'https://github.com/psalib/practcomp_2022.git/': The requested URL returned error: 400
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git statys 
+git: 'statys' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ GIT PUSH 
+GIT: command not found
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib 
+Password for 'https://psalib @github.com': 
+fatal: unable to access 'https://github.com/psalib/practcomp_2022.git/': The requested URL returned error: 400
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m "images, links, and code block"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git add tutorial.md 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ gut commit "images, links, block"
+
+Command 'gut' not found, did you mean:
+
+  command 'gum' from snap gum (0.12.0)
+  command 'gst' from deb gnu-smalltalk (3.2.5-1.3build3)
+  command 'git' from deb git (1:2.25.1-1ubuntu3.5)
+  command 'gpt' from deb gpt (1.1-5build1)
+  command 'lut' from deb tracetuner (3.0.6~beta+dfsg-2build1)
+  command 'nut' from deb nutsqlite (2.0.6-1)
+  command 'cut' from deb coreutils (8.30-3ubuntu2)
+  command 'gout' from deb scotch (6.0.9-1)
+  command 'gmt' from deb gmt (6.0.0+dfsg-1build2)
+  command 'gt' from deb genometools (1.6.1+ds-2)
+
+See 'snap info <snapname>' for additional versions.
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -m "images
+> "
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m "added a bunch"
+[master 70da9b4] added a bunch
+ 1 file changed, 17 insertions(+)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib 
+Password for 'https://psalib @github.com': 
+fatal: unable to access 'https://github.com/psalib/practcomp_2022.git/': The requested URL returned error: 400
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m "stuff"
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib 
+Password for 'https://psalib @github.com': 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.13 KiB | 1.13 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/psalib/practcomp_2022.git
+   c36e17f..70da9b4  master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m "emojis"
+[master 7aacd04] emojis
+ 1 file changed, 6 insertions(+)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib
+Password for 'https://psalib@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/psalib/practcomp_2022.git
+   70da9b4..7aacd04  master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano tutorial.md 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ get commit -a -m "fkjrbnf"
+
+Command 'get' not found, but there are 18 similar ones.
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m "nfruf"
+[master 9f34ef3] nfruf
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': salib 
+Password for 'https://salib @github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/psalib/practcomp_2022.git/'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': psalib
+Password for 'https://psalib@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/psalib/practcomp_2022.git
+   7aacd04..9f34ef3  master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ client_loop: send disconnect: Broken pipe
+BolaJohns-MacBook-Pro:~ bolajohn$ ssh salibp21@150.216.55.139 -p 1201
+salibp21@150.216.55.139's password: 
+Permission denied, please try again.
+salibp21@150.216.55.139's password: 
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.4.0-125-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+16 updates can be applied immediately.
+10 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+Last login: Tue Sep  6 17:01:06 2022 from 172.23.128.252
+(base) salibp21@ecubio:~$ ls
+examples.desktop  miniconda3  Miniconda3-latest-Linux-x86_64.sh  praccomp  practcomp_2022.git
+(base) salibp21@ecubio:~$ cd praccomp/practcomp_2022/
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls
+dnacalc.py  log20220901.txt  README.md  tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ python dnacalc.py
+
+
+Sequence:  ATCGATCGATCG
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls -l dnacalc.py 
+-rw-rw-r-- 1 salibp21 salibp21 81 Sep 22 17:17 dnacalc.py
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ chmod u+x dnacalc.py
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls -l dnacalc.py
+-rwxrw-r-- 1 salibp21 salibp21 81 Sep 22 17:17 dnacalc.py
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls
+dnacalc.py  log20220901.txt  README.md  tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ echo $PATH 
+/home/salibp21/miniconda3/bin:/home/salibp21/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ecubio/FUSTr/bin:/home/ecubio/miniconda3/bin:/home/linuxbrew/.linuxbrew/bin:$PATH:/snap/bin:/usr/local/go/bin:/home/salibp21/go/bin
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py
+
+
+Sequence:  ATCGATCGATCG
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py
+
+
+Sequence:  ATCGATCGATCG
+Sequence Length:  12.0 
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py
+
+
+Sequence:  ATCGATCGATCG
+Sequence Length:  12.0 
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ .
+./                     .openmpi-post-link.sh  
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ .
+./                     .openmpi-post-link.sh  
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+
+
+Sequence:  ATCGATCGATCG
+Sequence Length:  12.0 
+
+A:  0.25
+Traceback (most recent call last):
+  File "/home/salibp21/praccomp/practcomp_2022/./dnacalc.py", line 17, in <module>
+    print('C: '. NumberC/SeqLength)
+AttributeError: 'str' object has no attribute 'NumberC'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./
+dnacalc.py  .git/       
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ././dnacalc.py 
+
+
+Sequence:  ATCGATCGATCG
+Sequence Length:  12.0 
+
+A:  0.25
+Traceback (most recent call last):
+  File "/home/salibp21/praccomp/practcomp_2022/././dnacalc.py", line 17, in <module>
+    print('C: '. NumberC/SeqLength)
+AttributeError: 'str' object has no attribute 'NumberC'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+  File "/home/salibp21/praccomp/practcomp_2022/./dnacalc.py", line 5
+    DNASeq = input('Enter a DNA Sequence)
+                                         ^
+SyntaxError: EOL while scanning string literal
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+Enter a DNA Sequence   
+
+
+Sequence:  
+Sequence Length:  0.0 
+
+Traceback (most recent call last):
+  File "/home/salibp21/praccomp/practcomp_2022/./dnacalc.py", line 18, in <module>
+    print('A: ', NumberA/SeqLength)
+ZeroDivisionError: float division by zero
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+Enter a DNA Sequence: ATCGATCGATCGATCGATCGATCGTCGAT
+
+
+Sequence:  ATCGATCGATCGATCGATCGATCGTCGAT
+Sequence Length:  29.0 
+
+A:  0.2413793103448276
+C:  0.2413793103448276
+G:  0.2413793103448276
+T:  0.27586206896551724
+Traceback (most recent call last):
+  File "/home/salibp21/praccomp/practcomp_2022/./dnacalc.py", line 28, in <module>
+    print('\nMelting Temp ', MeltTempLong, 'C')
+NameError: name 'MeltTempLong' is not defined
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+  File "/home/salibp21/praccomp/practcomp_2022/./dnacalc.py", line 30
+    MeltTempLong = 64.9 + 41 * (TotalStrong - 16.4) / SeqLength
+    ^
+IndentationError: expected an indented block
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dna
+-bash: ./dna: No such file or directory
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+Enter a DNA Sequence: ATCGATCGATCGATCGATCGATCGATCGATCGATCG
+
+
+Sequence:  ATCGATCGATCGATCGATCGATCGATCGATCGATCG
+Sequence Length:  36.0 
+
+A:  0.25
+C:  0.25
+G:  0.25
+T:  0.25
+
+Melting Temp(long):  66.72222222222223 C
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ /.dna
+-bash: /.dna: No such file or directory
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+Enter a DNA Sequence: ATCGATCGATCGATCGATCG
+
+
+Sequence:  ATCGATCGATCGATCGATCG
+Sequence Length:  20.0 
+
+A:  0.25
+C:  0.25
+G:  0.25
+T:  0.25
+
+Melting Temp(long):  51.78000000000001 C
+A 25.0 %
+T 25.0 %
+C 25.0 %
+G 25.0 %
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+  File "/home/salibp21/praccomp/practcomp_2022/./dnacalc.py", line 39
+    print('\n\n')
+                 ^
+IndentationError: unindent does not match any outer indentation level
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dna
+-bash: ./dna: No such file or directory
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+Enter a DNA Sequence: ATCATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGT
+
+
+Sequence:  ATCATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGT 
+
+Sequence Length:  44.0 
+
+
+Melting Temp(long):  69.18636363636364 C
+A 25.0 %
+T 27.272727272727273 %
+C 25.0 %
+G 22.727272727272727 %
+The complimentary Seqence is: tagtagctagctagctagctagctagctagctagctagctagca 
+
+The reverse compliment is:  acgatcgatcgatcgatcgatcgatcgatcgatcgatcgatgat 
+
+
+
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nani dnacalc.py 
+
+Command 'nani' not found, did you mean:
+
+  command 'nano' from snap nano (5.7+pkg-4057)
+  command 'nabi' from deb nabi (1.0.0-4)
+  command 'nano' from deb nano (4.8-1ubuntu1)
+  command 'nant' from deb nant (0.92~rc1+dfsg-7)
+
+See 'snap info <snapname>' for additional versions.
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ nano dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ./dnacalc.py 
+Enter a DNA Sequence: ATCGATCGATCGAATCGATCGATCGATCGATCGATCGATCG
+
+
+Sequence:  ATCGATCGATCGAATCGATCGATCGATCGATCGATCGATCG 
+
+Sequence Length:  41.0 
+
+
+Melting Temp(long):  68.5 C
+
+A 26.829268292682926 %
+
+T 24.390243902439025 %
+
+C 24.390243902439025 %
+
+G 24.390243902439025 %
+
+The complimentary Seqence is: tagctagctagcttagctagctagctagctagctagctagc 
+
+The reverse compliment is:  cgatcgatcgatcgatcgatcgatcgattcgatcgatcgat 
+
+
+
+
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ LS
+LS: command not found
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ ls
+dnacalc.py  log20220901.txt  README.md  tutorial.md
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m "added dna calc script"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dnacalc.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git add dnacalc.py 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git commit -a -m "dna calc script"
+[master ba3148e] dna calc script
+ 1 file changed, 48 insertions(+)
+ create mode 100755 dnacalc.py
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': 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
+Password for 'https://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@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/psalib/practcomp_2022.git/'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ 
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': pjsalib7
+Password for 'https://pjsalib7@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/psalib/practcomp_2022.git/'
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git push 
+Username for 'https://github.com': pjsalib7
+Password for 'https://pjsalib7@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 823 bytes | 823.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/psalib/practcomp_2022.git
+   9f34ef3..ba3148e  master -> master
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ client_loop: send disconnect: Broken pipe
+BolaJohns-MacBook-Pro:~ bolajohn$ 
+Display all 1550 possibilities? (y or n)
+BolaJohns-MacBook-Pro:~ bolajohn$ ssh
+ssh          ssh-add      ssh-agent    ssh-copy-id  ssh-keygen   ssh-keyscan  sshd         
+BolaJohns-MacBook-Pro:~ bolajohn$ ssh salibp21@150.216.55.139 -p 1201
+salibp21@150.216.55.139's password: 
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.4.0-125-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+19 updates can be applied immediately.
+5 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+Last login: Thu Sep 22 17:11:12 2022 from 172.23.130.194
+(base) salibp21@ecubio:~$ ls
+examples.desktop  miniconda3  Miniconda3-latest-Linux-x86_64.sh  praccomp  practcomp_2022.git
+(base) salibp21@ecubio:~$ cd praccomp
+(base) salibp21@ecubio:~/praccomp$ ls
+practcomp_2022  test.txt
+(base) salibp21@ecubio:~/praccomp$ cd practcomp_2022
+(base) salibp21@ecubio:~/praccomp/practcomp_2022$ client_loop: send disconnect: Broken pipe
+BolaJohns-MacBook-Pro:~ bolajohn$ screen -r 
+There is no screen to be resumed.
+BolaJohns-MacBook-Pro:~ bolajohn$ ls screen 
+ls: screen: No such file or directory
+BolaJohns-MacBook-Pro:~ bolajohn$ screen ls 
+[screen is terminating]
+BolaJohns-MacBook-Pro:~ bolajohn$ 
+  [Restored Oct 10, 2022 at 12:28:59 PM]
+Last login: Mon Oct  3 21:47:34 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ 
+  [Restored Oct 12, 2022 at 10:03:56 AM]
+Last login: Wed Oct 12 10:03:56 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bolajohns-mbp:~ bolajohn$ 
+  [Restored Oct 18, 2022 at 11:02:32 AM]
+Last login: Thu Oct 13 16:52:03 on console
+Restored session: Thu Oct 13 16:49:29 EDT 2022
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ 
+  [Restored Nov 1, 2022 at 5:00:01 PM]
+Last login: Tue Nov  1 16:17:50 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ 
+  [Restored Nov 1, 2022 at 5:07:08 PM]
+Last login: Tue Nov  1 17:07:02 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ 
+  [Restored Nov 15, 2022 at 9:40:26 AM]
+Last login: Tue Nov 15 09:40:19 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ 
+  [Restored Nov 21, 2022 at 11:47:33 AM]
+Last login: Mon Nov 21 11:47:17 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ 
+  [Restored Nov 29, 2022 at 4:06:50 PM]
+Last login: Wed Nov 23 19:44:16 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ 
+  [Restored Dec 3, 2022 at 10:22:33 PM]
+Last login: Sat Dec  3 22:22:32 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+BolaJohns-MacBook-Pro:~ bolajohn$ 
